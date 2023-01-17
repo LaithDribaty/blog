@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap demo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+        <style>
+            .glowing-card {
+                position:relative;
+                box-shadow: 0px 0px 10px rgb(255 255 255 / 80%);
+                min-height: 250px;
+                background-size:cover !important;
+            }
+            .glowing-card::after{
+                width:100%;
+                height:100%;
+                border-radius:50px;
+                position:absolute;
+                top:0;left:0;
+                z-index:-1;
+                content:'';
+                background:inherit;
+                filter:blur(20px);
+                transform:scale(1.05);
+                opacity:0.8;
+                transition:500ms all ease-in-out 0ms;
+            }
+
+
+            .add-two-sweepers{
+                position: relative;
+            }
+            .add-two-sweepers span{
+                padding: 2%;
+                position: absolute;
+                top: 47%;
+            }
+            .add-two-sweepers span:nth-child(1){
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+                right: 0;
+            }
+            .add-two-sweepers span:nth-child(2){
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+                left: 0;
+            }
+            .add-two-sweepers span:hover {
+                cursor: pointer;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <nav class="navbar border-bottom shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/logo.svg" width="40" height="34" />
+                </a>
+                <a href="about" class="h-100 nav-item fw-bold text-decoration-none text-dark">
+                    About
+                </a>
+            </div>
+        </nav>
+        
+        <div class="row py-5 border-bottom w-100">
+            <div class="col-md-4">
+                <div id="heros-gallery-scene" class="mx-auto add-two-sweepers">
+                    <span></span>
+                    <span></span>
+                    <!-- a threejs scene to show heros of the website and twig around between them -->
+                </div>
+                <div id="veil">
+
+                </div>
+            </div>
+            <div class="col-md-8">
+                <!-- todo - should be rendered not staticly -->
+                <div class="row w-100 gy-3">
+                    <div class="col">
+                        <div class="border border-0 rounded rounded-2 w-100 p-3 py-1 glowing-card" style="background-image: url('https://assets.codepen.io/48941/photo-1560015534-cee980ba7e13.avif');">
+                            <img src="assets/images/laith.jpg" width="100" height="100" class="rounded-circle" alt="...">
+                            <span class="text-white">Laith Drebaty</span>
+                            <p class="text-white">
+                                Read about software engineering as laith drebaty say about it in his blog.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="border border-0 rounded rounded-2 w-100 p-3 py-1 glowing-card" style="background-image: url('https://assets.codepen.io/48941/photo-1647099450706-bddaf1219994.avif');">
+                            <img src="assets/images/laith.jpg" width="100" height="100" class="rounded-circle" alt="...">
+                            <span class="text-white">
+                                Yafa Al Azki
+                            </span>
+                            <p class="text-white">
+                                See what yafa say about movies, novels, music and much more in her wall of posts.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="border border-0 rounded rounded-2 w-100 p-3 py-1 glowing-card" style="background-image: url('https://assets.codepen.io/48941/photo-1647099450706-bddaf1219994.avif');">
+                            <img src="assets/images/laith.jpg" width="100" height="100" class="rounded-circle" alt="...">
+                            <span class="text-white">
+                                Ahamad Al halwany
+                            </span>
+                            <p class="text-white">
+                                See what yafa say about movies, novels, music and much more in her wall of posts.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="border border-0 rounded rounded-2 w-100 p-3 py-1 glowing-card" style="background-image: url('https://assets.codepen.io/48941/photo-1560015534-cee980ba7e13.avif');">
+                            <img src="assets/images/laith.jpg" width="100" height="100" class="rounded-circle" alt="...">
+                            <span class="text-white">
+                                Al Husein Alia
+                            </span>
+                            <p class="text-white">
+                                Read about software engineering as laith drebaty say about it in his blog.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-dark text-secondary px-4 py-5 text-center shadow">
+            <div class="py-5">
+                <h1 class="display-5 fw-bold text-white">
+                    Who Are We?
+                </h1>
+                <div class="col-lg-6 mx-auto">
+                    <p class="fs-5 mb-4">
+                        We are a punch of experienced people to start your journey in learning things in different topics. This is the right place to read articles interactively which may increase your comprehansive of things.
+                    </p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">
+                            Browse Hot Articles
+                        </button>
+                        <button type="button" class="btn btn-outline-light btn-lg px-4">
+                            Browse Topics
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br>
+
+        <!-- content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <!-- card -->
+                    <div class="p-3">
+                        <div>
+                            <img class="w-100 border-0 rounded" src="assets/images/books.jpg" alt="">
+                        </div>
+                        <div class="text-secondary">
+                            aliquip labore
+                        </div>
+                        <h2>
+                            Laborum aliquip labore tempor
+                        </h2>
+                        <div>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam soluta illum alias voluptas quaerat minus dolore eos numquam, ratione cupiditate eligendi laboriosam, beatae iure obcaecati repellat est iusto nisi reprehenderit.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <!-- card -->
+                    <div class="p-3">
+                        <div>
+                            <img class="w-100 border-0 rounded" src="assets/images/3drendering.jpeg" alt="">
+                        </div>
+                        <div class="text-secondary">
+                            aliquip labore
+                        </div>
+                        <h2>
+                            Minim exercitation adipisicing nisi 
+                        </h2>
+                        <div>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nostrum incidunt unde accusantium itaque, provident eaque libero repellendus tempore eveniet sapiente quos explicabo modi quia quisquam veritatis, sint nulla maiores!
+                        </div>
+                    </div>
+                    <!-- card -->
+                    <div>
+                        <div class="p-3">
+                            <img class="w-100 border-0 rounded" src="assets/images/electricity.jpg" alt="">
+                        </div>
+                        <div class="text-secondary">
+                            occaecat est sint.
+                        </div>
+                        <h2>
+                            Duis commodo ea do deserunt mollit labore sunt.
+                        </h2>
+                        <div>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur debitis delectus labore hic officia, maxime odio accusamus dolorum, aperiam, earum rerum provident libero ducimus enim ipsum doloremque reiciendis possimus repellendus.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br><br>
+
+        <footer class="bg-light text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2023 Copyright:
+                <a class="text-dark" href="https://bloggers.com/">
+                    bloggers.com
+                </a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+        <!-- the builded version of the modules you code -->
+        <script src="dist/bundle.js"></script>
+    </body>
+</html>
