@@ -107,7 +107,7 @@ let app = {
     const loader = new GLTFLoader();
     loader.load(
         // resource URL
-        '/assets/glb/truffle_man.glb',
+        'assets/glb/truffle_man.glb',
         // called when the resource is loaded
         ( gltf ) => {
             gltf.scene.scale.set(2,2,2)
